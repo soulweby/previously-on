@@ -8,9 +8,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* background-color: #282c34;
-  color: #f1f1ff */
+  background-color: #f1f1ff;
+  color:  rgb(85, 26, 139);
 }
 

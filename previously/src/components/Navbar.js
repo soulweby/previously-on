@@ -9,8 +9,8 @@ export default function Navbar() {
     <nav className='navlink'>
         <div className='main-logo'>
         <img src={logo} alt='logo' className='logo' />
-        <Link to="./" className='link'>Discover</Link>
-        <Link to="./favorite" className='link'>Favorite</Link>
+        <Link to="/" className='link'>Discover</Link>
+        <Link to="/favorite" className='link'>Favorite</Link>
         </div>
         <form className='navform'>
           <input  type="search" placeholder="search series"/>
