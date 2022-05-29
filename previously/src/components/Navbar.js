@@ -6,6 +6,7 @@ export default function Navbar() {
     <div className='navbar'>
     <nav className='navlink'>
         <Link to="./">Discover</Link>
+        <form ></form>
     </nav>
 
     </div>
