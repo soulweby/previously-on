@@ -19,7 +19,7 @@ export default function Banner() {
 
   const bannerStyle = {
     backgroundImage: `url("${series.map((serie) => (
-      serie.backdrop || serie.poster
+      serie?.backdrop || serie?.poster
     ))}")`,
     backgroundSize: "cover",
     backgroundPosition: "center center"
