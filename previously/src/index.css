@@ -9,6 +9,9 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   background-color: #f1f1ff;
+  /* background: #111; */
+  /* background:  rgb(85, 26, 139); */
   color:  rgb(85, 26, 139);
+  /* color:  #f1f1ff ; */
 }
 

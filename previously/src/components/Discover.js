@@ -13,10 +13,10 @@ export default function Discover() {
     useEffect(() => {
        const fetchData = async () => {
            let result = await api.get("https://api.betaseries.com/shows/discover")
-           console.log(result.data.shows);
-           let finalResult = result.data.shows;
+          //  console.log(result.data.shows);
+          //  let finalResult = result.data.shows;
 
-           setmovie(finalResult)
+          //  setmovie(finalResult)
        }
 
        fetchData();
