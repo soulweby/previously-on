@@ -1,69 +1,85 @@
-*{
+*,
+::before,
+::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  outline: none;
 }
+
+button {
+  background: none;
+  border: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Nosifer&display=swap');
 
 @font-face {
   font-family: "font-1";
   src: url(./assets/Vanderick.ttf);
 }
+
 .App {
   text-align: center;
 }
-.navbar{
+
+.navbar {
   border-radius: 0.1rem;
   width: 100%;
   height: 50px;
-  box-shadow: 0 0  1px rgb(85, 26, 139);
+  background: linear-gradient(to bottom, rgba(74, 74, 74, 0.6), rgba(0, 0, 0, 0));
+  position: fixed;
   z-index: 1;
 }
-.link{
+
+.link {
   font-family: font-1;
   text-decoration: none;
+  color: #f1f1ff;
 }
-.navlink{
+
+.navlink {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  /* background: transparent; */
 }
-.navform{
+
+.navform {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.main-logo{
+
+.main-logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   width: 500px;
   height: 50px;
 }
-.logo{
+
+.logo {
   width: 50px;
   height: 50px;
   border-radius: 50px;
 }
 
 input {
+  color: #111;
   border: none;
   border-radius: 4px;
   padding: 2px;
-  color: rgb(85, 26, 139);
-  box-shadow: 0 0  1px rgb(85, 26, 139);
-
+  box-shadow: 0 0 1px #111 ;
 }
-
 
 input[type=submit] {
   border: none;
   cursor: pointer;
 }
 
-                     /*~*BANNER STYLE*~*/
+/*~*BANNER STYLE*~*/
 
-.banner{
+.banner {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -73,21 +89,26 @@ input[type=submit] {
   background-color: rgb(74, 74, 74);
   position: relative;
 }
-.banner-content{
+
+.banner-content {
   width: 60vw;
   padding: 8vh 4% 0 4%;
 }
-.banner-title{
+
+.banner-title {
   font-size: 1.5rem;
-  color:  rgba(255, 255, 255, 255);
+  color: rgba(255, 255, 255, 255);
 }
-.banner-buttons{
+
+.banner-buttons {
   display: flex;
 }
-.banner-description{
-  color : rgba(255, 255, 255, 0.7)
+
+.banner-description {
+  color: rgba(255, 255, 255, 0.7);
 }
-.banner-button{
+
+.banner-button {
   border: none;
   display: flex;
   align-items: center;
@@ -98,21 +119,65 @@ input[type=submit] {
   border-radius: 5px;
   cursor: pointer;
 }
-.banner-button-play{
-  background-color: rgba(255, 255, 255, 0.7);
+
+.banner-button-play {
+  color: #111;
+  /* background-color: rgba(255, 255, 255, 0.7); */
 }
-.banner::after{
-  content:"";
+
+.banner::after {
+  content: "";
   width: 100%;
   height: 3rem;
   display: block;
   position: absolute;
   bottom: 0;
-  background: linear-gradient(180, rgba(31, 31, 31, rgba(31, 31, 31, 0.5), #111 ));
+  background: linear-gradient(180deg, rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.5), #111);
 }
 
-.favorite{
 
+/*~*CARD STYLE*~*/
+.result {
+  display: flex;
+  overflow-x: visible;
+  overflow-y: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  font-family: font-1;
+  /* text-transform: uppercase; */
+  border-radius: 2rem;
+  transition: 0.2s ease-in-out;
+  display: flex;
+ 
+}
+
+
+img {
+  border-radius: 2rem;
+  height: 400px;
+}
+
+.card {
+  border-radius: 2rem;
+  transition: transform 0.2s ease;
+  margin: 4rem 0.4rem;
+  box-shadow: 0 0 5px #f1f1ff;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  background-color: #111;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.favorite {
 }
 
 
