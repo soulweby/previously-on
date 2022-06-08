@@ -36,6 +36,7 @@ export default function Card({movie}) {
                         {movie.genres.Martial_Arts} {" "}
                   
     </p>
+    <button className='banner-button' > Ajouter  💝</button>
     </div>
   )
 }
