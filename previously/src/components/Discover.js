@@ -17,6 +17,7 @@ export default function Discover() {
 
   const handleModalClick = () => {
     modal ? setModal(false) : setModal(true);
+    console.log("comment");
   }
   useEffect(() => {
     const fetchData = async () => {

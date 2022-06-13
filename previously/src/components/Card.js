@@ -1,6 +1,7 @@
 import React from 'react'
+export default function Card({movie, modal, modalStatut}) {
 
-export default function Card({movie}) {
+
   return (
     <div className='card'>
     <h2>{movie.title}</h2>
@@ -36,7 +37,7 @@ export default function Card({movie}) {
                         {movie.genres.Martial_Arts} {" "}
                   
     </p>
-    <button className='banner-button' > Ajouter  💝</button>
+    <button className='banner-button'  onClick={modal}> Ajouter  💝</button>
     </div>
   )
 }
