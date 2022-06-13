@@ -10,7 +10,7 @@ export default function Banner() {
 
     const fetchData = async () => {
       let result = await api.get('https://api.betaseries.com/movies/random')
-      console.log(result.data.movies);
+      // console.log(result.data.movies);
       let finalResult = result.data.movies;
       setseries(finalResult)
     }

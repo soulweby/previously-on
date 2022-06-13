@@ -1,5 +1,18 @@
 import React from 'react'
-export default function Card({movie, modal, modalStatut}) {
+import { useEffect, useState } from "react";
+export default function Card({movie}) {
+
+  const [modal, setModal] = useState(false);
+
+  const handleModalClick = () => {
+    modal ? setModal(false) : setModal(true);
+    console.log("oui");
+  }
+
+useEffect(() => {
+  console.log(modal + "souley")
+  console.log( + "leandre")
+}, []);
 
 
   return (
@@ -37,7 +50,7 @@ export default function Card({movie, modal, modalStatut}) {
                         {movie.genres.Martial_Arts} {" "}
                   
     </p>
-    <button className='banner-button'  onClick={modal}> Ajouter  💝</button>
+    <button className='banner-button'  onClick={handleModalClick}> Ajouter  💝</button>
     </div>
   )
 }
