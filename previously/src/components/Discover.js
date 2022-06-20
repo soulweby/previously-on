@@ -2,8 +2,6 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import api from "../api"
 import Card from './Card';
-import HomeTop from './HomeTop';
-import SerieDetail from './SerieDetail';
 
 
 export default function Discover() {
@@ -13,23 +11,19 @@ export default function Discover() {
   // "access_token": "02c0567faad4" 
 
   const [movies, setmovie] = useState([]);
-  const [modal, setModal] = useState(false);
 
-  const handleModalClick = () => {
-    modal ? setModal(false) : setModal(true);
-    console.log("comment");
-  }
   useEffect(() => {
     const fetchData = async () => {
       let result = await api.get("https://api.betaseries.com/shows/discover")
       // console.log(result.data.shows);
       let finalResult = result.data.shows;
-
       setmovie(finalResult)
     }
 
-    fetchData();cle
+    fetchData();
   }, []);
+
+  console.log("souley");
   return (
 
     <div>
@@ -40,12 +34,6 @@ export default function Discover() {
           <Card key={movie.id} movie={movie} />
         ))}
       </div>
-      <div className='home-top'>
-      {movies.map((top) => (
-          <HomeTop key={top.id} top={top} />
-        ))}
-      </div>
-      <SerieDetail modal={handleModalClick} movie={movies} modalStatut={modal}/>
     </div>
   )
 }
