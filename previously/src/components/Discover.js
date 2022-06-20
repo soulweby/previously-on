@@ -28,7 +28,7 @@ export default function Discover() {
       setmovie(finalResult)
     }
 
-    fetchData();
+    fetchData();cle
   }, []);
   return (
 
