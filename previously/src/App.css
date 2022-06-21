@@ -207,3 +207,9 @@ img {
   display: block;
   overflow-y: hidden;
 }
+.light{
+  background-color: red;
+  position: fixed;
+  /* top: 20px; */
+  left: 180px;
+}

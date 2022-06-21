@@ -17,7 +17,7 @@ export default function Card({movie}) {
 
   const addFav = async () => {
     console.log("nou")
-    let result = await api.post(`https://api.betaseries.com/shows/show?id=${movieId}&access_token=02c0567faad4&client_id=2df01f59dc89`)
+    let result = await api.post(`https://api.betaseries.com/shows/show?id=${movieId}`)
     return result;
   }
 
@@ -25,7 +25,6 @@ export default function Card({movie}) {
   return (
     <div className='card'>
     <h2>{movie.title}</h2>
-    <h4>{movie.id}</h4>
     <img src={ movie?.images.poster} alt="poster" />
     <p>Genres: {movie.genres.Drama}  {" "}
                         {movie.genres.Crime} {" "}
@@ -59,7 +58,7 @@ export default function Card({movie}) {
                   
     </p>
     <button className='banner-button' onClick={handleModalClick}> ➕</button>
-    <button className='banner-button' onClick={() =>addFav()}>-</button>
+    <button className='banner-button light' onClick={() =>addFav()}>Ajouter 💝</button>
     <SerieDetail  movie={movie} modal={handleModalClick} modalStatut={modal}/>
     </div>
   )
