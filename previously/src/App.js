@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Discover from './components/Discover';
 import Banner from './components/Banner';
-// import Favorite from './components/Favorite';
+import Favorite from './components/Favorite';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
     <Banner/>
     <Routes>
       <Route path='/' element={<Discover/>} />
-      {/* <Route path='/favorite' element={<Favorite/>} /> */}
+      <Route path='/favorite' element={<Favorite/>} />
     </Routes>
     </div>
   );

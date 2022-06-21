@@ -11,19 +11,20 @@ export default function Discover() {
   // "access_token": "02c0567faad4" 
 
   const [movies, setmovie] = useState([]);
-
+ 
   useEffect(() => {
     const fetchData = async () => {
       let result = await api.get("https://api.betaseries.com/shows/discover")
       // console.log(result.data.shows);
       let finalResult = result.data.shows;
       setmovie(finalResult)
+    
     }
 
     fetchData();
   }, []);
 
-  console.log("souley");
+
   return (
 
     <div>
