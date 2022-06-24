@@ -11,6 +11,7 @@ export default function Favorite() {
       let result = await api.get("https://api.betaseries.com/shows/discover")
       // console.log(result.data.shows);
       let finalResult = result.data.shows;
+      console.log(finalResult);
       setFav(finalResult)
     
     }

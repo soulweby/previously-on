@@ -208,8 +208,13 @@ img {
   overflow-y: hidden;
 }
 .light{
-  background-color: red;
+  background-color: rgba(57, 67, 99, 0.329);
   position: fixed;
   /* top: 20px; */
   left: 180px;
+}
+
+.archiv{
+  position: fixed;
+  margin-top: 20px;
 }

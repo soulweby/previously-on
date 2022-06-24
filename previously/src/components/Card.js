@@ -9,7 +9,7 @@ export default function Card({movie}) {
 
   const movieId = movie.id;
 
-  console.log(movieId);
+  // console.log(movieId);
 
   const handleModalClick = () => {
     modal ? setModal(false) : setModal(true);
@@ -18,6 +18,14 @@ export default function Card({movie}) {
   const addFav = async () => {
     console.log("nou")
     let result = await api.post(`https://api.betaseries.com/shows/show?id=${movieId}`)
+    console.log(result);
+    return result;
+  }
+
+  const Achirv = async () => {
+    console.log("oui")
+    let result = await api.post(`https://api.betaseries.com/shows/archive?id=${movieId}`)
+    console.log(result);
     return result;
   }
 
@@ -57,8 +65,10 @@ export default function Card({movie}) {
                         {movie.genres.Martial_Arts} {" "}
                   
     </p>
+
     <button className='banner-button' onClick={handleModalClick}> ➕</button>
     <button className='banner-button light' onClick={() =>addFav()}>Ajouter 💝</button>
+    <button className='banner-button archiv' onClick={() =>Achirv()}>Archiver 📜</button>
     <SerieDetail  movie={movie} modal={handleModalClick} modalStatut={modal}/>
     </div>
   )
